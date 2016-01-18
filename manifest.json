@@ -1,0 +1,6 @@
+{
+	  "id"        : "preside-ext-social-login"
+	, "title"     : "Social Media Login"
+	, "author"    : "Login using Facebook,Twitter and Google. Requires Twitter4j library from http://twitter4j.org/en/index.html"
+	, "version"   : "0.1.0"
+}

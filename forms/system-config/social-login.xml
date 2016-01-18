@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<tab id="setting-tab" title="system-config.social-login:setting.tab.title" >
+		<fieldset id="setting">
+			<field name="website_login" label="system-config.social-login:website_login.label" type="boolean" help="system-config.social-login:website_login.help"  />
+
+			<field name="facebook_login" label="system-config.social-login:facebook_login.label" type="boolean" />
+			
+			<field name="twitter_login" label="system-config.social-login:twitter_login.label" type="boolean" />
+
+			<field name="google_login" label="system-config.social-login:google_login.label" type="boolean" />
+
+			
+			
+		</fieldset>
+	</tab>
+	<tab id="facebook-tab" title="system-config.social-login:facebook.tab.title" description="system-config.social-login:facebook.tab.description">
+		<fieldset id="facebook">
+			
+			<field name="facebook_appid"  control="textinput" required="false" label="system-config.social-login:facebook_appid.label"  help="system-config.social-login:facebook_appid.help"  placeholder="system-config.social-login:facebook_appid.placeholder" />
+			
+			<field name="facebook_secret"  control="textinput" required="false" label="system-config.social-login:facebook_secret.label"  help="system-config.social-login:facebook_secret.help"  placeholder="system-config.social-login:facebook_secret.placeholder" />
+
+			<field name="facebook_baseurl"  control="textinput" required="false" label="system-config.social-login:facebook_baseurl.label"  help="system-config.social-login:facebook_baseurl.help"  placeholder="system-config.social-login:facebook_baseurl.placeholder" />
+
+			<field name="facebook_redirecturl"  control="textinput" required="false" label="system-config.social-login:facebook_redirecturl.label"  help="system-config.social-login:facebook_redirecturl.help"  placeholder="system-config.social-login:facebook_redirecturl.placeholder" />
+		</fieldset>
+	</tab>
+
+	<tab id="twitter-tab" title="system-config.social-login:twitter.tab.title" description="system-config.social-login:twitter.tab.description">
+		<fieldset id="twitter">
+			
+			
+			<field name="twitter_consumer_key"  control="textinput" required="false" label="system-config.social-login:twitter_consumer_key.label"  help="system-config.social-login:twitter_consumer_key.help"  placeholder="system-config.social-login:twitter_consumer_key.placeholder" />
+
+			<field name="twitter_consumer_secret"  control="textinput" required="false" label="system-config.social-login:twitter_consumer_secret.label"  help="system-config.social-login:twitter_consumer_secret.help"  placeholder="system-config.social-login:twitter_consumer_secret.placeholder" />
+
+			<field name="twitter_redirecturl"  control="textinput" required="false" label="system-config.social-login:twitter_redirecturl.label"  help="system-config.social-login:twitter_redirecturl.help"  placeholder="system-config.social-login:twitter_redirecturl.placeholder" />
+		</fieldset>
+	</tab>
+
+	<tab id="google-tab" title="system-config.social-login:google.tab.title" description="system-config.social-login:google.tab.description">
+		<fieldset id="google">
+			<field name="google_client_id"  control="textinput" required="false" label="system-config.social-login:google_client_id.label"  help="system-config.social-login:google_client_id.help"  placeholder="system-config.social-login:google_client_id.placeholder" />
+			
+			<field name="google_apikey"  control="textinput" required="false" label="system-config.social-login:google_apikey.label"  help="system-config.social-login:google_apikey.help"  placeholder="system-config.social-login:google_apikey.placeholder" />
+
+			<field name="google_secretkey"  control="textinput" required="false" label="system-config.social-login:google_secretkey.label"  help="system-config.social-login:google_secretkey.help"  placeholder="system-config.social-login:google_secretkey.placeholder" />
+
+			<field name="google_baseurl"  control="textinput" required="false" label="system-config.social-login:google_baseurl.label"  help="system-config.social-login:google_baseurl.help"  placeholder="system-config.social-login:google_baseurl.placeholder" />	
+
+			<field name="google_redirecturl"  control="textinput" required="false" label="system-config.social-login:google_redirecturl.label"  help="system-config.social-login:google_redirecturl.help"  placeholder="system-config.social-login:google_redirecturl.placeholder" />
+		</fieldset>
+	</tab>
+
+
+</form>
