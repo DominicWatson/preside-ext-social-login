@@ -111,22 +111,22 @@ component output=false singleton=true {
     		var part1 = listGetAt(fbAuthResult.filecontent, 1, "&");
 			var access_token = listGetAt(part1, 2, "=");
 
-    		var userInfo = _facebookGetUserInfo(access_token);
+    		var userInfo = _facebookGetUserInfo(access_token = access_token,return_fields = config.facebook_return_fields);
     		var socialSession = _getSessionStorage().getVar(_getSessionKey());
-    		
+
     		socialSession.facebook_access_token = access_token; 
     		
     		_getSessionStorage().setVar(name=_getSessionKey(),value=socialSession);
     		if(structCount(userInfo)){
 	    		var socialUser = {
 	    			  social_id   = userInfo.id
-	    			, label 	  = userInfo.name
-					, firstname   = userInfo.first_name
-					, lastname    = userInfo.last_name
-					, email       = userInfo.email
-					, social_link = userInfo.link?:""
+	    			, label 	  = userInfo.name 	 	
+					, firstname   = userInfo.first_name     ?:""
+					, lastname    = userInfo.last_name 	?:""
+					, email       = userInfo.email 		?:""
+					, social_link = userInfo.link 		?:""
 					, image_link  = ""
-					, gender 	  = userInfo.gender?:""
+					, gender 	  = userInfo.gender 	?:""
 					, type 		  = "facebook"
 	    		}
 
@@ -151,11 +151,11 @@ component output=false singleton=true {
     	return {};
 	}
 
-	private function _facebookGetUserInfo(required string access_token){
+	private function _facebookGetUserInfo(required string access_token, required string return_fields){
 
 		var userInfo = {};
 
-		http url="https://graph.facebook.com/me?access_token=#arguments.access_token#" result="userInfo";
+		http url="https://graph.facebook.com/me?fields=#arguments.return_fields#&access_token=#arguments.access_token#" result="userInfo";
 
 		if (isJSON(userInfo.filecontent)){
 			return deserializeJSON(userInfo.filecontent);
