@@ -151,11 +151,11 @@ component output=false singleton=true {
     	return {};
 	}
 
-	private function _facebookGetUserInfo(required string access_token){
+	private function _facebookGetUserInfo(required string access_token, required string return_fields){
 
 		var userInfo = {};
 
-		http url="https://graph.facebook.com/me?access_token=#arguments.access_token#" result="userInfo";
+		http url="https://graph.facebook.com/me?fields=#arguments.return_fields#&access_token=#arguments.access_token#" result="userInfo";
 
 		if (isJSON(userInfo.filecontent)){
 			return deserializeJSON(userInfo.filecontent);

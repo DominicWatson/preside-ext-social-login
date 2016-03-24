@@ -24,6 +24,9 @@
 			<field name="facebook_baseurl"  control="textinput" required="false" label="system-config.social-login:facebook_baseurl.label"  help="system-config.social-login:facebook_baseurl.help"  placeholder="system-config.social-login:facebook_baseurl.placeholder" />
 
 			<field name="facebook_redirecturl"  control="textinput" required="false" label="system-config.social-login:facebook_redirecturl.label"  help="system-config.social-login:facebook_redirecturl.help"  placeholder="system-config.social-login:facebook_redirecturl.placeholder" />
+
+			<field name="facebook_return_fields"  control="textinput" required="false" label="system-config.social-login:facebook_return_fields.label"  help="system-config.social-login:facebook_return_fields.help"  placeholder="system-config.social-login:facebook_return_fields.placeholder" />
+
 		</fieldset>
 	</tab>
 
